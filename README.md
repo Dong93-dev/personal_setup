@@ -6,7 +6,7 @@ This is for personal setup for Dong. I will covered some environments I am using
 Some basic development tools:
 Homebrew & iterm2 & node & yarn & git
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install --cask iterm1 && brew install yarn && brew install git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install --cask iterm2 && brew install git
 ```
 ## iterm2
 ```
@@ -42,7 +42,7 @@ Firstly, install Vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
-
+### personal settings
 Then **copy** the whole folders [`nvim`](./nvim_related/nvim) to `~/.config`. So after copying, you should have `~/.config/coc` and `~/.config/nvim`. 
 - `nvim/init.vim` contains all the plugin information in `init.vim`  
 - `nvim/lua` lua configurations.  
@@ -65,7 +65,21 @@ Here I listed some useful coc extensions with its VIM commands.
 
 Use `:PlugInstall` to install all plugins.
 
-### important for my personal settings
+### important dependencies for my personal settings
+brew install:
+```
+brew install node
+brew install yarn
+# universal ctags for /preservim/tagbar
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+# if you cannot install universal try to install exuberant ctags
+# nerd font for vim-devicons
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+
+```
+
+
 In my `nvim/coc-settings.json`, **black** is used for formatting and refed so you need to point to the correct location of black.
 The same thing happens to **python**, which will be used for running black. Python location was specified in `nvim/lua/others.lua`. To let nvim to execute python. You need to **pynvim**, which is the python client. 
 Personally, it is suggested to create a specific python env **just for nvim** and include all the packages used by nvim, such as black. Such virtual env can be created like [this section](#personal_nvim).   
