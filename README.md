@@ -39,7 +39,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 ### personal settings
-Then **copy** the whole folders [`nvim`](./nvim_related/nvim) to `~/.config`. So after copying, you should have `~/.config/coc` and `~/.config/nvim`. 
+Then **copy** the whole folders [`nvim`](./nvim_related/nvim) to `~/.config`. So after copying, you should have `~/.config/nvim`. 
 - `nvim/init.vim` contains all the plugin information in `init.vim`  
 - `nvim/lua` lua configurations.  
 - `nvim/coc-settings.json` coc settings for coc extension such as pyright
