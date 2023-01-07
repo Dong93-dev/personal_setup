@@ -8,10 +8,6 @@ Homebrew & iterm2 & node & yarn & git
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install --cask iterm2 && brew install git
 ```
-## iterm2
-```
-brew install --cask iterm1
-```
 
 ## shell
 The newest default shell with macOS is zsh. Three files need some attention for configuration, namely `.profile`, `.zprofile`, `.zshrc`. I only deal with `.zprofile`, `.zshrc`.
@@ -82,11 +78,18 @@ brew install --cask font-hack-nerd-font
 
 In my `nvim/coc-settings.json`, **black** is used for formatting and refed so you need to point to the correct location of black.
 The same thing happens to **python**, which will be used for running black. Python location was specified in `nvim/lua/others.lua`. To let nvim to execute python. You need to **pynvim**, which is the python client. 
-Personally, it is suggested to create a specific python env **just for nvim** and include all the packages used by nvim, such as black. Such virtual env can be created like [this section](#personal_nvim).   
+Personally, it is suggested to create a specific python env **just for nvim** and include all the packages used by nvim, such as black. Such virtual env can be created using conda:
+```
+conda create -n nvim python=3.9
+conda activate nvim
+pip install balck
+pip install pynvim
+```
+Refer to the section of [conda](#conda_install) for conda installation.
 
 
 # python
-## conda
+## <a name="conda_install"></a>conda
 ``` sh
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
@@ -103,15 +106,6 @@ conda --version
 To disable auto base environment activate:
 ```
 conda config --set auto_activate_base false
-```
-
-## <a name="personal_nvim"></a>env for my personal NVIM
-if you are copying my `nvim` settings and configurations, you can use the following virtual env directly.
-```
-conda create -n nvim python=3.9
-conda activate nvim
-pip install balck
-pip install pynvim
 ```
 
 
