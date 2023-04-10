@@ -77,6 +77,12 @@ lua require('fugitive')
 
 
 " ------------------------------------
+" telescope
+lua require('telescope_set')
+
+
+
+" ------------------------------------
 " others
 lua require('others')
 

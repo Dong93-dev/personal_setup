@@ -42,7 +42,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 Then **copy** the whole folders [`nvim`](./nvim_related/nvim) to `~/.config`. So after copying, you should have `~/.config/nvim`. 
 - `nvim/init.vim` contains all the plugin information in `init.vim`  
 - `nvim/lua` lua configurations.  
-- `nvim/coc-settings.json` coc settings for coc extension such as pyright
+- `nvim/coc-settings.json` coc settings for coc extension such as pyright. This file will be for *global* vim settings. For local settings, please create a hidden foler called `.vim` in a project folder and place `coc-settings.json` inside, such as `nvim_related/.vim/` in this repo.
 - The plugin `coc` is included in `int.vim`. You can use coc command to install its extension to make it support the language you are using, such as json, python. Once you install these extensions, a folder `coc/*` will be created.
 
 

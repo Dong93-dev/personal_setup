@@ -1,0 +1,9 @@
+{
+	"python": {
+		"formatting": {
+			"provider": "black",
+			"blackPath": "/Users/dong.zhou/miniconda3/envs/fs_poc_dbx/bin/black"
+		},
+		"pythonPath": "/User/dong.zhou/miniconda3/envs/fs_poc_dbx/bin/python"
+	}
+}
