@@ -16,14 +16,14 @@ Plug 'nvim-tree/nvim-web-devicons' " developer file icons
 Plug 'jiangmiao/auto-pairs'  " autopair
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhinz/vim-startify' " landing page
-Plug 'romgrk/barbar.nvim' " fancy tab bars
-Plug 'ambv/black'	" use black
+Plug 'romgrk/barbar.nvim', {'commit': 'c1b5d351ccd'} " fancy tab bars
+" Plug 'ambv/black'	" use black
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " color scheme
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' } " color scheme
 Plug 'tpope/vim-fugitive' " git tool
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown' }
 call plug#end()
 
 
