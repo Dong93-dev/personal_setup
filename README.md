@@ -4,7 +4,7 @@ This is for personal setup for Dong. I will covered some environments I am using
 
 # macOS
 Some basic development tools:
-Homebrew & iterm2 & node & yarn & git
+Homebrew & iterm2 & git
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install --cask iterm2 && brew install git
 ```
@@ -92,11 +92,9 @@ Refer to the section of [conda](#conda_install) for conda installation.
 ## <a name="conda_install"></a>conda
 ``` sh
 mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-~/miniconda3/bin/conda init bash
-~/miniconda3/bin/conda init zsh
+rm -rf ~miniconda3/miniconda.sh
 ```
 After this, check if conda is installed correctly
 ```
